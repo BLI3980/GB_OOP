@@ -16,7 +16,6 @@ public class Seminar01 {
         beverages.add(new Product("milk", 200));
         beverages.add(new Product("champagne", 6000));
         beverages.add(new Dairy("milk", 55, "3%"));
-
         Vending machine2 = new Vending(beverages);
         System.out.println(machine2);
 
@@ -27,14 +26,15 @@ public class Seminar01 {
         groceries.add(new Product("banana", 80));
         groceries.add(new Product("avokado", 800));
         groceries.add(orange);
-
         Vending machine3 = new Vending(groceries);
         System.out.println(groceries);
         System.out.println(machine3);
 
+        // Homework. Adding another inherited class - Vegetables:
         List<Product> vegies = new ArrayList<>();
         vegies.add(new Vegetables("potato", 80, "Belarus"));
         vegies.add(new Vegetables("corn", 110, "Argentina"));
+        vegies.add(new Vegetables("beetroot", 110, "Russia"));
         Vending machine4 = new Vending(vegies);
         System.out.println(machine4);
 
