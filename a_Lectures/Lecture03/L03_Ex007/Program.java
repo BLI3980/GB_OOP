@@ -1,4 +1,4 @@
-package Lesson_09.Ex007;
+package L03_Ex007;
 
 // три вода
 public class Program {

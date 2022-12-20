@@ -27,7 +27,7 @@ public class Worker implements Iterator<String> {
 
     @Override
     public boolean hasNext() {
-        return index++ < 4;
+        return index++ < 4; // Increase index by 1 if it's value less than 4.
     }
 
     @Override

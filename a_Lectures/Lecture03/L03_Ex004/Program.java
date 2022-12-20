@@ -1,6 +1,6 @@
 package L03_Ex004;
 
-import Ex004.ExBeverage.*;
+import L03_Ex004.ExBeverage.*;
 import L03_Ex004.ExBeverage.Coffee;
 import L03_Ex004.ExBeverage.Water;
 

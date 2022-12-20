@@ -1,10 +1,9 @@
-package Lesson_09.Ex007;
+package L03_Ex007;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Beverage
-        implements Iterable<Ingredient> {
+public abstract class Beverage implements Iterable<Ingredient> {
     public List<Ingredient> components;
     int index;
 
