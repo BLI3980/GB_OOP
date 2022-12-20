@@ -19,6 +19,6 @@ public class Dog extends Animal implements Speakable, Runnable{
 
     @Override
     public String toString() {
-        return "Dog" + super.toString();
+        return "Dog: " + super.toString();
     }
 }

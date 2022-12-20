@@ -22,6 +22,6 @@ public class Cat extends Animal implements Speakable, Runnable{
 
     @Override
     public String toString() {
-        return "Cat" + super.toString();
+        return "Cat: " + super.toString();
     }
 }

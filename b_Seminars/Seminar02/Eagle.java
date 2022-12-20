@@ -21,6 +21,6 @@ public class Eagle extends Animal implements Speakable, Runnable, Flyable{
 
     @Override
     public String toString() {
-        return "Eagle" + super.toString();
+        return "Eagle: " + super.toString();
     }
 }
