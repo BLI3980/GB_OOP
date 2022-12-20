@@ -1,5 +1,6 @@
-Cat{name='Barsik', owner='Ivan', age=3}
-Dog{name='Tuzik', owner='Vasiliy', age=5}
+Cat: {name='Barsik', owner='Ivan', age=3}
+Dog: {name='Tuzik', owner='Vasiliy', age=5}
 Bird: {name='Noisy', owner='Masha', age=1}; Flies?: false
-Duck{name='Donald', owner='Petr', age=4}
-Eagle{name='Stells', owner='Stepan', age=40}
+Duck: {name='Donald', owner='Petr', age=4}
+Eagle: {name='Stells', owner='No owner / wild animal', age=40}
+Seal: {name='Torpedo', owner='No owner / wild animal', age=8}
