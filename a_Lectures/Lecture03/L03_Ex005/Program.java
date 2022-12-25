@@ -11,14 +11,14 @@ public class Program {
         Random r = new Random();
 
         // #region Collections.sort(numbers);
-         List<Integer> numbers = new ArrayList<>();
-         for (int i = 0; i < 10; i++) {
-         numbers.add(r.nextInt(1,20));
-         }
-
-         System.out.println(numbers);
-         Collections.sort(numbers);
-         System.out.println(numbers);
+//         List<Integer> numbers = new ArrayList<>();
+//         for (int i = 0; i < 10; i++) {
+//         numbers.add(r.nextInt(1,20));
+//         }
+//
+//         System.out.println(numbers);
+//         Collections.sort(numbers);
+//         System.out.println(numbers);
         // #endregion
 
         // #region Comparable<Worker>
