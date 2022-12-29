@@ -1,4 +1,7 @@
 package MyLinkedList;
 
-public interface DesendIterator {
+import java.util.Iterator;
+
+public interface DescendIterator<E> {
+    Iterator<E> descendingIterator();
 }

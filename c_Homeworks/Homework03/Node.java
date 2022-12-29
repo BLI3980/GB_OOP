@@ -1,29 +1,36 @@
 
-public class Element<E> {
-    private E data;
-    public Element<E> next = null;
+public class Node<E> {
+    private E element;
+    public Node<E> next = null;
+    public Node<E> prev = null;
+
+    public Node(E element, Node<E> next, Node<E> prev) {
+        this.element = element;
+        this.next = next;
+        this.prev = prev;
+    }
+    public Node(E element){
+        set(element);
+    }
+    public Node(){}
+
     public boolean isNext(){
         return next != null;
     }
-
-    Element(E data){
-        set(data);
+    void set(E element){
+        this.element = element;
     }
-    Element(){}
-    void set(E data){
-        this.data = data;
-    }
-    void add(E data){
-        if(isNext()){ //if next != null
-            next.add(data);
+    void add(E element){
+        if(isNext()){                       // if next != null
+            next.add(element);
         }
-        else{
-            next = new Element<>(data);
+        else{                               // if next == null
+            next = new Node<>(element);
 //            System.out.println(next);
-//            System.out.println(data);
+//            System.out.println(element);
         }
     }
     E get(){
-        return data;
+        return element;
     }
 }

@@ -3,23 +3,13 @@ package MyLinkedList;
 
 import java.util.Iterator;
 
-public class LinkedContainer<E> implements Linked<E>, Iterable<E>, DescendIterator<E>{
-
-    public static void main(String[] args) {
-        Linked<String> stringLinked = new LinkedContainer<>();
-        stringLinked.addLast("abc");            // index 1
-        stringLinked.addLast("def");            // index 2
-        stringLinked.addLast("ghi");            // index 3
-        stringLinked.addLast("jkl");            // index 4
-        stringLinked.addFirst("zyx");           // index 0
-        System.out.println(stringLinked.size());
-        System.out.println(stringLinked.getElementByIndex(3));
-    }
+public class MyLinkedList<E> implements Linked<E>, Iterable<E>, DescendIterator<E>{
     private Node<E> firstNode;
     private Node<E> lastNode;
     private int size = 0;
 
-    public LinkedContainer() {
+    public MyLinkedList() {
+        // first and last Node always containing null element and null first and last references, correspondingly
         lastNode = new Node<>(null, firstNode, null);
         firstNode = new Node<>(null, null, lastNode );
     }
@@ -42,10 +32,12 @@ public class LinkedContainer<E> implements Linked<E>, Iterable<E>, DescendIterat
         size++;
     }
 
+
     @Override
     public int size() {
         return size;
     }
+
 
     @Override
     public E getElementByIndex(int index) {
