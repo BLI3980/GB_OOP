@@ -1,11 +1,15 @@
 public class User implements Comparable<User> {
-// Fields
+    /**
+    * Fields
+    */
     private String firstName;
     private String lastName;
     private int age;
     private Personnel subordinates = new Personnel();
 
-// Constructors
+    /**
+     * Constructors
+     */
     public User(Personnel subordinates, String firstName, String lastName, int age) {
         this(firstName,lastName,age);
         this.subordinates = subordinates;
@@ -21,10 +25,9 @@ public class User implements Comparable<User> {
         this.age = age;
     }
 
-
-
-
-// Getters
+    /**
+     * Getters
+     */
     public Personnel getSubordinates() {
         return subordinates;
     }
@@ -38,7 +41,9 @@ public class User implements Comparable<User> {
         return age;
     }
 
-// Setters
+    /**
+     * Setters
+     */
     public String setFirstName(String newFirstName) {
         return this.firstName = newFirstName;
     }
@@ -49,13 +54,17 @@ public class User implements Comparable<User> {
         return this.age = newAgeValue;
     }
 
-// Overridden toString
+    /**
+     * Overridden toString
+     */
     @Override
     public String toString() {
         return String.format("First Name: %s; Last Name: %s; Age: %d", firstName, lastName, age);
     }
 
-// Overridden compareTo. Two level sort - 1. by fullName; 2. by age
+    /**
+     * Overridden compareTo. Two level sort - 1. by fullName; 2. by age
+     */
     @Override
     public int compareTo(User other) {
         String fullName = this.firstName + this.lastName;

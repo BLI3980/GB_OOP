@@ -9,10 +9,11 @@ public class VectorList<E> implements Iterable<E> {
         node = new Node<>();
     }
 
-    public int  size(){
+    public int size(){
         return counter;
     }
-    public void add(E element){
+
+    public void addElement(E element){
         if (counter == 0){          // первый узел надо обрабатывать отдельно, иначе в первом узле элемент будет балластом
             node.set(element);
         }
@@ -25,10 +26,13 @@ public class VectorList<E> implements Iterable<E> {
     public Iterator<E> iterator(){
         return new VectorIterator(node);
     }
-    // Узел с элементом сделан внутренним, чтобы не светитть его наружу
+    // Узел с элементом сделан внутренним, чтобы не светить его наружу
     private class Node<E>{
         private E element;
         private Node<E> next = null;
+        boolean isNext(){
+            return next != null;
+        }
 
         Node(){}
         Node(E element){
@@ -43,13 +47,12 @@ public class VectorList<E> implements Iterable<E> {
             }
             else{                   // иначе, создадим следующий узел
                 next = new Node<>(element);
+                System.out.println("next: " + next);
+                System.out.println("element: " + element);
             }
         }
         E get(){
             return element;
-        }
-        boolean isNext(){
-            return next != null;
         }
     }
     // Итератор светить наружу тоже не хочется, он слишком специфичный.
@@ -61,7 +64,7 @@ public class VectorList<E> implements Iterable<E> {
         }
         @Override
         public boolean hasNext(){
-            if(counter == 1 && isFirst) return true; // отдельно обработать один элемент (потому как у  него нет next)
+            if(counter == 1 && isFirst) return true; // отдельно обработать один элемент (потому как у него нет next)
             return current.isNext();
         }
         @Override
