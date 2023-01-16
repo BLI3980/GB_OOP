@@ -9,13 +9,14 @@ public class Main4 {
         swordsmanTeam.addWarrior(new Swordsman("Sman3", new TwoHandsSword(), new ShieldSteel(), 110));
 
         swordsmanTeam.forEach(item -> System.out.println(item));
-        System.out.println("The sum of all damages for this team: " + swordsmanTeam.getAllDamage());
-        System.out.println("The sum of all health points for this team: " + swordsmanTeam.getAllHP());
+        System.out.println("\nThe total of all damages for this team: " + swordsmanTeam.getAllDamage());
+        System.out.println("The total of all health points for this team: " + swordsmanTeam.getAllHP());
         System.out.println("The maximum damage range for this team: " + swordsmanTeam.maxDamageRange());
+        System.out.println("The total protection from all shields for this team: " + swordsmanTeam.getAllProtection());
 
 
 
-        System.out.println("============ Team 2 ==============");
+        System.out.println("\n============ Team 2 ==============");
         Commander commander2 = new Commander("Hail", new BigAxe(), new ShieldSteel(),170);
         Team<Archer> archerTeam = new Team<>(commander1);
         System.out.println(commander2);
@@ -23,11 +24,13 @@ public class Main4 {
         archerTeam.addWarrior(new Archer("Archman2", new LongBow(), new ShieldWood(), 95, 180));
 
         archerTeam.forEach(item -> System.out.println(item));
-        System.out.println("The sum of all damages for this team: " + archerTeam.getAllDamage());
-        System.out.println("The sum of all health points for this team: " + archerTeam.getAllHP());
+        System.out.println("\nThe total of all damages for this team: " + archerTeam.getAllDamage());
+        System.out.println("The total of all health points for this team: " + archerTeam.getAllHP());
         System.out.println("The maximum damage range for this team: " + archerTeam.maxDamageRange());
+        System.out.println("The total protection from all shields for this team: " + archerTeam.getAllProtection());
 
-        System.out.println("============ Team 3 ==============");
+
+        System.out.println("\n============ Team 3 ==============");
         Commander commander3 = new Commander("Rain", new BigAxe(), new ShieldWood(), 250);
         Team<Warrior> mixedTeam = new Team<>(commander3);
         System.out.println(commander3);
@@ -37,9 +40,11 @@ public class Main4 {
         for (Warrior item: mixedTeam) {
             System.out.println(item);
         }
-        System.out.println("The sum of all damages for this team: " + mixedTeam.getAllDamage());
-        System.out.println("The sum of all health points for this team: " + mixedTeam.getAllHP());
+        System.out.println("\nThe total of all damages for this team: " + mixedTeam.getAllDamage());
+        System.out.println("The total of all health points for this team: " + mixedTeam.getAllHP());
         System.out.println("The maximum damage range for this team: " + mixedTeam.maxDamageRange());
+        System.out.println("The total protection from all shields for this team: " + mixedTeam.getAllProtection());
+
 
 
 

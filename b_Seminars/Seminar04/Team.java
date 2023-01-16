@@ -41,6 +41,14 @@ public class Team<E extends Warrior> implements Iterable<E>{
         return  sumHP;
     }
 
+    public int getAllProtection() {
+        int sumProtection = 0;
+        for (E warrior: warriorTeam) {
+            sumProtection += warrior.getShield().protection();
+        };
+        return sumProtection;
+    }
+
     public int maxDamageRange() {
         int maxDR = 0;
         for(E item: this) {
