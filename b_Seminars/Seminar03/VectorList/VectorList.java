@@ -29,7 +29,7 @@ public class VectorList<E> implements Iterable<E> {
     // Узел с элементом сделан внутренним, чтобы не светить его наружу
     private class Node<E>{
         private E element;
-        private Node<E> next = null;
+        private Node<E> next = null;    // next is also last. Initially null, but when adding elements values are recorded in each next
         boolean isNext(){
             return next != null;
         }

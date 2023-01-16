@@ -1,7 +1,7 @@
 import java.util.Iterator;
-//import java.util.LinkedList;
-//
-//public class LinkIterator implements Iterator<E> {
+import java.util.LinkedList;
+
+//public class LinkIterator<E> implements Iterator<E> {
 //    private Node<E> current;
 //    private boolean isFirst = true;
 //    private int counter = 0;

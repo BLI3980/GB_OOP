@@ -8,14 +8,14 @@ public class Point2D_3 {
      * Это конструктор ...
      * @param valueX это координата Х
      * @param valueY это координата Y
-     */
+     **/
 
     /**
      * Bla bla bla - comments
-     * */
+     **/
 // =======================================================================
 // Note, same thing with signatures as with methods is possible with constructors also
-// If we have a constructor a X parameters, but then we need to have a constructor for Y
+// If we have a constructor with X parameters, but then we need to have a constructor for Y
 // amount of parameters we can re-use initial constructor instead of creating new
 // constructor each time. As long as the initial constructor has the broadest amount of
 // parameters:
