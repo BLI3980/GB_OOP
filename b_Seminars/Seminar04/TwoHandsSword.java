@@ -1,4 +1,4 @@
-public class BigSword extends Sword{
+public class TwoHandsSword extends Sword{
     @Override
     public int handsGrip() {
         return 2;
@@ -11,6 +11,6 @@ public class BigSword extends Sword{
 
     @Override
     public String toString() {
-        return "Big Sword: " + super.toString();
+        return "Two Hands Sword: " + super.toString();
     }
 }

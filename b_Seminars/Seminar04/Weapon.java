@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface Weapon {
+public interface Weapon {
+    int damage();
 }

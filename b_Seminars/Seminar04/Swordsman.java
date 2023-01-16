@@ -1,7 +1,7 @@
-public class Swordsman extends Warrior{
+public class Swordsman extends Warrior<Sword, Shield>{
 //    Sword sword;
-    public Swordsman(String name, Sword sword, int healthPoint) {
-        super(name, sword, healthPoint);
+    public Swordsman(String name, Sword sword, Shield shield, int healthPoint) {
+        super(name, sword, shield, healthPoint);
     }
 
     @Override
