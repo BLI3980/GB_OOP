@@ -31,10 +31,8 @@ public class ViewUser {
                         break;
                     case READ:
                         String id = prompt("Идентификатор пользователя: ");
-
                         User user = userController.readUser(id);
                         System.out.println(user);
-
                         break;
                     case LIST:
                         List<User> lst = userController.readAllUsers();
@@ -45,6 +43,10 @@ public class ViewUser {
                         userController.checkIfIdExists(idToChange);
                         userController.updateUser(idToChange, userDetails());
                         break;
+                    case DELETE:
+                        String idToDelete = prompt("Введите ID пользователя для удаления: ");
+                        userController.checkIfIdExists(idToDelete);
+                        userController.deleteUser(idToDelete);
                 }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());;

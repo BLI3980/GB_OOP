@@ -36,7 +36,12 @@ public class UserController {
     public void updateUser(String userId, User userUpdated) throws Exception {
         userUpdated.setId(userId);
         validateId(userUpdated);
-        repository.saveUpdatedUser(userUpdated);
+        repository.updateUserDetails(userUpdated);
+    }
+
+    public void deleteUser(String deleteUserId) {
+        repository.deleteUser(deleteUserId);
+
     }
 
     private void validateUser(User user) throws Exception{

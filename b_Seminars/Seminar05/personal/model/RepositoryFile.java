@@ -1,5 +1,8 @@
 package personal.model;
 
+import java.io.BufferedWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +44,7 @@ public class RepositoryFile implements Repository {
     }
 
     @Override
-    public void saveUpdatedUser(User newUser) {
+    public void updateUserDetails(User newUser) {
         List<User> users = getAllUsers();
         User target = users.stream().filter(i -> i.getId().equals(newUser.getId())).
                 findFirst().get();
@@ -49,7 +52,22 @@ public class RepositoryFile implements Repository {
         target.setLastName(newUser.getLastName());
         target.setPhone(newUser.getPhone());
         writeToFile(users);
+    }
 
+    @Override
+    public void deleteUser(String deleteUserId) {
+        List<User> users = getAllUsers();
+        List<User> tempList = new ArrayList<>();
+        User toDelete = users.stream().filter(i -> i.getId().equals(deleteUserId)).
+                findFirst().get();
+
+        for (User user: users) {
+            if(user.getId().equals(toDelete.getId())){
+                continue;
+            }
+            tempList.add(user);
+        }
+        writeToFile(tempList);
     }
 
     private void writeToFile(List<User> users){

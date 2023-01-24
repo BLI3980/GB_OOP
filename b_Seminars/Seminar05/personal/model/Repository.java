@@ -5,5 +5,6 @@ import java.util.List;
 public interface Repository {
     List<User> getAllUsers();
     String createUser(User user);
-    void saveUpdatedUser(User user);
+    void updateUserDetails(User user);
+    void deleteUser(String id);
 }
