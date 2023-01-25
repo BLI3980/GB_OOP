@@ -8,8 +8,8 @@ import java.util.List;
 // Наследник не должен делать меньше чем родитель
 public class Ex003_1LSP {
     public static void main(String[] args) throws Exception {
-        List<Animal> list = 
-        new ArrayList<>(Arrays.asList(new Cat(), new Fish() ));
+        List<Animal_L06_1> list =
+        new ArrayList<>(Arrays.asList(new Cat_L06_1(), new Fish_L06_1() ));
         for (var animal : list) {
             System.out.println(animal.getType());
             System.out.println(animal.getLegsCount());
@@ -17,7 +17,7 @@ public class Ex003_1LSP {
     }
 }
 
-abstract class Animal {
+abstract class Animal_L06_1 {
     public String getType() {
         return "Зверушка";
     }
@@ -27,7 +27,7 @@ abstract class Animal {
     }
 }
 
-class Cat extends Animal {
+class Cat_L06_1 extends Animal_L06_1 {
 
     @Override
     public String getType() {
@@ -40,8 +40,7 @@ class Cat extends Animal {
     }
 }
 
-class Fish extends Animal
-{
+class Fish_L06_1 extends Animal_L06_1 {
      @Override
      public String getType() {
         return "Рыбка";

@@ -8,7 +8,7 @@ import java.util.List;
 public class Ex001_2SRP {
     public static void main(String[] args) {
 
-        PlannerSRP planner = new PlannerSRP();
+        Planner3SRP planner = new Planner3SRP();
         planner.addEntry("1");
         planner.removeEntry(0);
         // planner.saveAllText("path");
@@ -40,12 +40,12 @@ class DataManager {
         return true;
     }
 
-    public void saveAllText(PlannerSRP planner,String path) {
+    public void saveAllText(Planner3SRP planner, String path) {
         /// ошибки связанные с...
         if(check(path));///
     }
     
-    public void loadFromFile(PlannerSRP planner,String path) {
+    public void loadFromFile(Planner3SRP planner, String path) {
         /// ошибки связанные с...
         if(check(path));///
     }

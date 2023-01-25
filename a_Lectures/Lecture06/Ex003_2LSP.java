@@ -9,13 +9,13 @@ import java.util.List;
 
 public class Ex003_2LSP {
     public static void main(String[] args) {
-        List<AbstractAnimal> list1 = new ArrayList<>(Arrays.asList(new Dog(), new Python()));
+        List<AbstractAnimal> list1 = new ArrayList<>(Arrays.asList(new Dog_L06_2(), new Python()));
 
         for (var animal : list1) {
             System.out.println(animal.getType());
         }
 
-        List<Legs> list2 = new ArrayList<>(Arrays.asList(new Dog()/* , new Python() */));
+        List<Legs> list2 = new ArrayList<>(Arrays.asList(new Dog_L06_2()/*, new Python()*/));
         for (var animal : list2) {
             System.out.println(animal.getLegsCount());
 
@@ -33,7 +33,7 @@ interface Legs {
     int getLegsCount();
 }
 
-class Dog extends AbstractAnimal implements Legs {
+class Dog_L06_2 extends AbstractAnimal implements Legs {
 
     @Override
     public String getType() {
