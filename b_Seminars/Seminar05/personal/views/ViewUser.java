@@ -47,6 +47,7 @@ public class ViewUser {
                         String idToDelete = prompt("Введите ID пользователя для удаления: ");
                         userController.checkIfIdExists(idToDelete);
                         userController.deleteUser(idToDelete);
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());;
