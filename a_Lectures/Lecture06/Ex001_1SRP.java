@@ -5,7 +5,7 @@ import java.util.List;
 
 // Single responsibility principle	
 // Принцип единственной ответственности
-// У класса есть предназначение
+// У класса есть одно предназначение
 
 public class Ex001_1SRP {
     public static void main(String[] args) {
