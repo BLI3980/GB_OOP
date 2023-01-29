@@ -30,8 +30,8 @@ public class Square {
         return side;
     }
 
-    // Relocating these two methods into separate classes which only calculate are and draw a figure
-    // I.e. one responsibility per class
+// Relocating these two methods into separate classes which only calculate are and draw a figure
+// I.e. one responsibility per class
 //    public int getArea() {
 //        return side * side;
 

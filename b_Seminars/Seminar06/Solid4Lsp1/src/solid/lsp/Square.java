@@ -1,23 +1,32 @@
 package Solid4Lsp1.src.solid.lsp;
 
-public class Square extends Rectangle {
+public class Square extends Quadrilateral { // Changing the extension from Rectangle to Quadrilateral
+    // Modifying this class according to Quadrilateral extension
+    public int side;
 
     public Square(int side) {
-        super(side, side);
+        this.side = side;
     }
 
-    @Override
-    public void setSideA(int sideA) {
-        super.setSideA(sideA);
+    public int getSide() {
+        return side;
     }
 
-    @Override
-    public void setSideB(int sideB) {
-        super.setSideA(sideB);
+    public void setSide(int side) {
+        this.side = side;
     }
+//    @Override
+//    public void setSideA(int sideA) {
+//        super.setSideA(sideA);
+//    }
+//
+//    @Override
+//    public void setSideB(int sideB) {
+//        super.setSideA(sideB);
+//    }
 
     @Override
     public int getArea() {
-        return (int) Math.pow(getSideA(), 2);
+        return (int) Math.pow(getSide(), 2);
     }
 }

@@ -1,6 +1,6 @@
-package Solid3Ocp1.src.solid.ocp;
+package Solid3Ocp1_1.solid.ocp;
 
-public class RightTriangle implements Shape {
+public class RightTriangle implements Shape, Area {
     private int leg1;
     private int leg2;
     private double hypotenuse;

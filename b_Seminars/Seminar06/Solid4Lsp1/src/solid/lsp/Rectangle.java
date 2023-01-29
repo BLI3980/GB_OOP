@@ -1,6 +1,6 @@
 package Solid4Lsp1.src.solid.lsp;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral{ // Adding an extension of Quadrilateral
     private int sideA;
     private int sideB;
 

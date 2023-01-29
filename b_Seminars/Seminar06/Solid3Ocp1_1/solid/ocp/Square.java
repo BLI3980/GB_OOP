@@ -1,6 +1,6 @@
-package Solid3Ocp1.src.solid.ocp;
+package Solid3Ocp1_1.solid.ocp;
 
-public class Square  implements Shape {
+public class Square  implements Shape, Area {
     private int side;
     public Square(int side) {
         this.side = side;
