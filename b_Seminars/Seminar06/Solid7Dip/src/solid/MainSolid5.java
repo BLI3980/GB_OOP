@@ -8,8 +8,8 @@ import Solid7Dip.src.solid.dip.ReportManager;
 public class MainSolid5 {
     public static void main(String[] args) {
         Report report = new Report();
-        ReportManager reportManager = new ReportManager(new PrintReport());
         report.calculate();
+        ReportManager reportManager = new ReportManager(new PrintReport());
         reportManager.output(report.getItems());
         ReportManager reportManager1 = new ReportManager(new DisplayReport());
         reportManager1.output(report.getItems());

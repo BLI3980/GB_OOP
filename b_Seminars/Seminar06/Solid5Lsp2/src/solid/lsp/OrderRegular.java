@@ -1,7 +1,7 @@
 package Solid5Lsp2.src.solid.lsp;
 
-public class Order extends Orderable{
-    public Order(int qnt, int price) {
+public class OrderRegular extends Orderable{
+    public OrderRegular(int qnt, int price) {
         super(price, qnt);
     }
 

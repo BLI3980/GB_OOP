@@ -12,7 +12,7 @@ public class ViewShape {
     }
 
     public void showArea() {
-        System.out.print("Площадь прямоугольника равна: ");
+        System.out.print("Площадь данного четырехугольника равна: ");
         System.out.println(quad.getArea());
     }
 }

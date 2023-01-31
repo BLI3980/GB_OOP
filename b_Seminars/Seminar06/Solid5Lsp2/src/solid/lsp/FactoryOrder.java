@@ -5,6 +5,6 @@ public class FactoryOrder {
         if (isBonus) {
             return new OrderBonus(qnt, price);
         }
-        return new Order(qnt, price);
+        return new OrderRegular(qnt, price);
     }
 }

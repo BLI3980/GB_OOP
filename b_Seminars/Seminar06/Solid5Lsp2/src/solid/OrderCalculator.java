@@ -1,6 +1,5 @@
 package Solid5Lsp2.src.solid;
 
-import Solid5Lsp2.src.solid.lsp.Order;
 import Solid5Lsp2.src.solid.lsp.Orderable;
 
 import java.util.ArrayList;

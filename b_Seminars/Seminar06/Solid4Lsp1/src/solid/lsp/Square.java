@@ -29,4 +29,9 @@ public class Square extends Quadrilateral { // Changing the extension from Recta
     public int getArea() {
         return (int) Math.pow(getSide(), 2);
     }
+
+    @Override
+    public String toString() {
+        return String.format("\nКвадрат имеет сторону, равную: %s", getSide());
+    }
 }

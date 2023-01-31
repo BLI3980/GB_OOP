@@ -29,6 +29,6 @@ public abstract class Orderable {
 
     @Override
     public String toString() {
-        return String.format("Стандартный заказ. Количество = %d, Цена = %d", qnt, price);
+        return String.format("Количество = %d, Цена = %d", qnt, price);
     }
 }

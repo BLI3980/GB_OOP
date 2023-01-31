@@ -13,6 +13,6 @@ public class OrderBonus extends Orderable{
 
     @Override
     public String toString() {
-        return "Бонусный заказ: " + super.toString();
+        return "Бонусный заказ: " + super.toString() + ". Действует 100% скидка.";
     }
 }

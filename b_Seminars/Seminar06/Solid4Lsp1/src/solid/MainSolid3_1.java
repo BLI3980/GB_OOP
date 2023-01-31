@@ -11,5 +11,10 @@ public class MainSolid3_1 {
         System.out.printf("В прямоугольнике сторона A = %d, сторона B = %d\n", rectangle.getSideA(), rectangle.getSideB());
         ViewShape view = new ViewShape(rectangle);
         view.showArea();
+
+        Square square = new Square(5);
+        System.out.println(square);
+        ViewShape viewSquare = new ViewShape(square);
+        viewSquare.showArea();
     }
 }

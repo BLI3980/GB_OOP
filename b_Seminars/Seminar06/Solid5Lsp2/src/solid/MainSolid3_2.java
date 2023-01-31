@@ -1,7 +1,6 @@
 package Solid5Lsp2.src.solid;
 
 import Solid5Lsp2.src.solid.lsp.FactoryOrder;
-import Solid5Lsp2.src.solid.lsp.Order;
 import Solid5Lsp2.src.solid.lsp.Orderable;
 
 public class MainSolid3_2 {
