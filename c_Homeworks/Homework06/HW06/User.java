@@ -1,6 +1,6 @@
 package HW06;
 
-public class User{
+public abstract class User{
 	private String name;
 	
 	public User(String name){
@@ -10,13 +10,5 @@ public class User{
 	public String getName(){
 		return name;
 	}
-	
-	public void save(){
-		Persister persister = new Persister(this);
-		persister.save();
-	}
-	
-	public void report(){
-		System.out.println("Report for user: " + name);
-	}
+
 }
