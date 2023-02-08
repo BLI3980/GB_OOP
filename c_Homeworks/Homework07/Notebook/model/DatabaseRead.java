@@ -1,2 +1,8 @@
-package Notebook.model;public interface DatabaseOps {
+package Notebook.model;
+
+import java.util.List;
+
+public interface DatabaseRead {
+    List<String> readDatabase();
+
 }

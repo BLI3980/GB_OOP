@@ -1,12 +1,12 @@
 package Notebook;
 
-import personal.controllers.UserController;
-import personal.model.FileOperation;
-import personal.model.FileOperationImpl;
-import personal.model.Repository;
-import personal.model.RepositoryFile;
-import personal.views.ViewUser;
-import static personal.Config.filename;
+import Notebook.controllers.UserController;
+import Notebook.model.FileOperation;
+import Notebook.model.FileOperationImpl;
+import Notebook.model.Repository;
+import Notebook.model.RepositoryFile;
+import Notebook.views.ViewUser;
+import static Notebook.Config.filename;
 
 public class Main {
     public static void main(String[] args) {

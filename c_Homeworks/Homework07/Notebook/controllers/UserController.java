@@ -1,7 +1,7 @@
 package Notebook.controllers;
 
-import personal.model.Repository;
-import personal.model.User;
+import Notebook.model.Repository;
+import Notebook.model.User;
 
 import java.util.List;
 
