@@ -12,9 +12,9 @@ public class UserController {
         this.repository = repository;
     }
 
-    public void saveUser(User user) throws Exception {
-        validateUser(user);
-        repository.createUser(user);
+    public List<User> readAllUsers() {
+        List<User> result = repository.getAllUsers();
+        return result;
     }
 
     public User readUser(String userId) throws Exception {
@@ -28,21 +28,25 @@ public class UserController {
         throw new Exception("User not found");
     }
 
-    public List<User> readAllUsers() {
-        List<User> result = repository.getAllUsers();
-        return result;
-    }
-
     public void updateUser(String userId, User userUpdated) throws Exception {
         userUpdated.setId(userId);
         validateId(userUpdated);
         repository.updateUserDetails(userUpdated);
     }
 
+    public void saveUser(User user) throws Exception {
+        validateUser(user);
+        repository.createUser(user);
+    }
+
     public void deleteUser(String deleteUserId) {
         repository.deleteUser(deleteUserId);
 
     }
+
+
+
+
 
     private void validateUser(User user) throws Exception{
         if (user.getFirstName().contains(" ")){

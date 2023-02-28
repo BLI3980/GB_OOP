@@ -21,11 +21,11 @@ public class DBReadFile implements DatabaseRead {
             //создаем BufferedReader с существующего FileReader для построчного считывания
             BufferedReader reader = new BufferedReader(fr);
             // считаем сначала первую строку
-//            String line = reader.readLine();
-//            if (line != null) {
-//                dbRead.add(line);
-//            }
-            String line = "";
+            String line = reader.readLine();
+            if (line != null) {
+                dbRead.add(line);
+            }
+//            String line = "";
             while (line != null) {
                 // считываем остальные строки в цикле
                 line = reader.readLine();

@@ -15,8 +15,7 @@ public class ViewUser {
     }
 
     public void run() {
-//        Commands com = Commands.NONE;
-//        String com = "";
+        Commands com = Commands.NONE;
 
         while (true) {
             String command = prompt("\nChoose the action from the list below:\n" +
@@ -27,63 +26,36 @@ public class ViewUser {
                     "5. Delete a note from the notebook.\n" +
                     "6. Exit the notebook.\n" +
                     "Type your choice here: ");
-//            com = Commands.valueOf(command.toUpperCase());
-//            if (com == Commands.EXIT) return;
-            if (command == "6") return;
+            com = Commands.valueOf(command.toUpperCase());
+            if (com == Commands.EXIT) return;
 
             try {
-//                switch (com) {
-//                    case CREATE:
-//                        String firstName = prompt("Имя: ");
-//                        String lastName = prompt("Фамилия: ");
-//                        String phone = prompt("Номер телефона: ");
-//                        userController.saveUser(new User(firstName, lastName, phone));
-//                        break;
-//                    case READ:
-//                        String id = prompt("Идентификатор пользователя: ");
-//                        User user = userController.readUser(id);
-//                        System.out.println(user);
-//                        break;
-//                    case LIST:
-//                        List<User> lst = userController.readAllUsers();
-//                        lst.forEach(i -> System.out.println(i + "\n"));
-//                        break;
-//                    case UPDATE:
-//                        String idToChange = prompt("Введите ID пользователя для изменений: ");
-//                        userController.checkIfIdExists(idToChange);
-//                        userController.updateUser(idToChange, userDetails());
-//                        break;
-//                    case DELETE:
-//                        String idToDelete = prompt("Введите ID пользователя для удаления: ");
-//                        userController.checkIfIdExists(idToDelete);
-//                        userController.deleteUser(idToDelete);
-//                        break;
-                    switch (command) {
-                        case "1":
-                            String firstName = prompt("Имя: ");
-                            String lastName = prompt("Фамилия: ");
-                            String phone = prompt("Номер телефона: ");
-                            userController.saveUser(new User(firstName, lastName, phone));
-                            break;
-                        case "2":
-                            List<User> lst = userController.readAllUsers();
-                            lst.forEach(i -> System.out.println(i + "\n"));
-                            break;
-                        case "3":
-                            String id = prompt("Идентификатор пользователя: ");
-                            User user = userController.readUser(id);
-                            System.out.println(user);
-                            break;
-                        case "4":
-                            String idToChange = prompt("Введите ID пользователя для изменений: ");
-                            userController.checkIfIdExists(idToChange);
-                            userController.updateUser(idToChange, userDetails());
-                            break;
-                        case "5":
-                            String idToDelete = prompt("Введите ID пользователя для удаления: ");
-                            userController.checkIfIdExists(idToDelete);
-                            userController.deleteUser(idToDelete);
-                            break;
+                switch (com) {
+                    case CREATE:
+                        String firstName = prompt("Имя: ");
+                        String lastName = prompt("Фамилия: ");
+                        String phone = prompt("Номер телефона: ");
+                        userController.saveUser(new User(firstName, lastName, phone));
+                        break;
+                    case READ:
+                        String id = prompt("Идентификатор пользователя: ");
+                        User user = userController.readUser(id);
+                        System.out.println(user);
+                        break;
+                    case LIST:
+                        List<User> lst = userController.readAllUsers();
+                        lst.forEach(i -> System.out.println(i + "\n"));
+                        break;
+                    case UPDATE:
+                        String idToChange = prompt("Введите ID пользователя для изменений: ");
+                        userController.checkIfIdExists(idToChange);
+                        userController.updateUser(idToChange, userDetails());
+                        break;
+                    case DELETE:
+                        String idToDelete = prompt("Введите ID пользователя для удаления: ");
+                        userController.checkIfIdExists(idToDelete);
+                        userController.deleteUser(idToDelete);
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());;

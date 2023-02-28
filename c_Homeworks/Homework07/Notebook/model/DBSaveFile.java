@@ -11,7 +11,7 @@ public class DBSaveFile implements DatabaseSave{
         this.dbFile = dbFile;
     }
     @Override
-    public String saveDatabase(List<String> database) {
+    public void saveDatabase(List<String> database) {
         try (FileWriter writer = new FileWriter(dbFile, false)) {
             for (String line : database) {
                 // запись всей строки

@@ -3,17 +3,21 @@ package Notebook.model;
 import java.time.LocalDateTime;
 
 public class RecordBasic extends Record{
-    public RecordBasic(int id, String header, String body) {
+    public RecordBasic(String id, String header, String body) {
         super(id, header, body);
     }
 
+    public RecordBasic(String header, String body) {
+        super(header, body);
+    }
+
     @Override
-    public int getId() {
+    public String getId() {
         return super.getId();
     }
 
     @Override
-    public void setId(int id) {
+    public void setId(String id) {
         super.setId(id);
     }
 

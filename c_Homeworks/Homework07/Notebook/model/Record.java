@@ -3,22 +3,27 @@ package Notebook.model;
 import java.time.LocalDateTime;
 
 public abstract class Record {
-    private int id;
+    private String id = "";
     private String header;
     private String body;
 //    private LocalDateTime dateTime;
 
-    public Record(int id, String header, String body) {
+    public Record(String header, String body) {
+        this.header = header;
+        this.body = body;
+    }
+
+    public Record(String id, String header, String body) {
         this.id = id;
         this.header = header;
         this.body = body;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -40,6 +45,6 @@ public abstract class Record {
 
     @Override
     public String toString() {
-        return String.format("Note ID: %d\nHeader: %s\nNote text: %s\n", getId(),getHeader(),getBody());
+        return String.format("Note ID: %s;\nHeader: %s;\nNote text: %s;\n", getId(),getHeader(),getBody());
     }
 }
