@@ -53,12 +53,17 @@ public class View {
                                 "==========================");
                         break;
                     case "4":
-//                        String idToChange = prompt("Введите ID пользователя для изменений: ");
-//                        controller.checkIfIdExists(idToChange);
-//                        controller.updateUser(idToChange, userDetails());
-//                        break;
+                        String idToChange = prompt("Enter ID of a note to edit: ");
+                        controller.checkIfIdExists(idToChange);
+                        controller.editNote(idToChange,noteDetails());
+                        break;
                     case "5":
-//                        String idToDelete = prompt("Введите ID пользователя для удаления: ");
+                        String idToDelete = prompt("Enter ID of a note to delete: ");
+                        controller.checkIfIdExists(idToDelete);
+                        controller.deleteNote(idToDelete);
+                        System.out.println("\n==========================\n" +
+                                "Note is deleted. See entire notebook to confirm.\n" +
+                                "==========================\n" );
 //                        controller.checkIfIdExists(idToDelete);
 //                        controller.deleteUser(idToDelete);
                         break;
@@ -75,11 +80,10 @@ public class View {
         return in.nextLine();
     }
 
-    private User userDetails() {
-        String firstName = prompt("Имя: ");
-        String lastName = prompt("Фамилия: ");
-        String phone = prompt("Номер телефона: ");
-        User newUser = new User(firstName, lastName, phone);
-        return newUser;
+    private Record noteDetails() {
+        String header = prompt("Write short description of new note: ");
+        String noteText = prompt("Write a text of the note itself: ");
+        Record noteUpdated = new RecordBasic(header, noteText);
+        return noteUpdated;
     }
 }

@@ -47,13 +47,30 @@ public class NotesOps implements Notes{
     }
 
     @Override
-    public void editNote(Record record) {
-
+    public void editNote(Record newNote) {
+        List<Record> notes = showAllNotes();
+        Record target = notes.stream().filter(oldNote ->
+                        oldNote.getId().equals(newNote.getId())).
+                        findFirst().get();
+        target.setHeader(newNote.getHeader());
+        target.setBody(newNote.getBody());
+        writeToFile(notes);
     }
 
     @Override
-    public void deleteNote(String userId) {
+    public void deleteNote(String deleteNoteId) {
+        List<Record> notes = showAllNotes();
+        List<Record> tempList = new ArrayList<>();
+        Record toDelete = notes.stream().filter(i -> i.getId().equals(deleteNoteId)).
+                findFirst().get();
 
+        for (Record note: notes) {
+            if(note.getId().equals(toDelete.getId())){
+                continue;
+            }
+            tempList.add(note);
+        }
+        writeToFile(tempList);
     }
 
     private void writeToFile(List<Record> records){
