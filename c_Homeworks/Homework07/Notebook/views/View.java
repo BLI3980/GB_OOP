@@ -3,7 +3,6 @@ package Notebook.views;
 import Notebook.controllers.Controller;
 import Notebook.model.Record;
 import Notebook.model.RecordBasic;
-import Notebook.model.User;
 
 import java.util.List;
 import java.util.Scanner;
@@ -47,7 +46,6 @@ public class View {
                     case "3":
                         String id = prompt("Enter id of note: ");
                         Record record = controller.readNote(id);
-//                        User user = controller.readUser(id);
                         System.out.println("\n==========================" +
                                 "\n" + record +"\n" +
                                 "==========================");
@@ -64,8 +62,6 @@ public class View {
                         System.out.println("\n==========================\n" +
                                 "Note is deleted. See entire notebook to confirm.\n" +
                                 "==========================\n" );
-//                        controller.checkIfIdExists(idToDelete);
-//                        controller.deleteUser(idToDelete);
                         break;
                 }
             } catch (Exception e) {

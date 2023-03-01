@@ -2,8 +2,6 @@ package Notebook.controllers;
 
 import Notebook.model.Notes;
 import Notebook.model.Record;
-import Notebook.model.Repository;
-import Notebook.model.User;
 
 import java.util.List;
 
