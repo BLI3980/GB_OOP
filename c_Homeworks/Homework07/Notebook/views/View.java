@@ -20,7 +20,7 @@ public class View {
         while (true) {
             String command = prompt("\nChoose the action from the list below:\n" +
                     "1. Create new note\n" +
-                    "2. Show the entire a notebook.\n" +
+                    "2. Show the entire notebook.\n" +
                     "3. Read a certain note.\n" +
                     "4. Edit an existing note.\n" +
                     "5. Delete a note from the notebook.\n" +
